@@ -1,0 +1,26 @@
+head
+	title beyond-hello-world
+
+body
+	.container
+		+loginButtons
+
+		+chatbox
+
+		+messages
+
+
+template(name="chatbox")
+	form#chatform
+		input#chatinput(type="text")
+
+template(name="messages")
+	#messages
+		each messages
+			+message
+
+template(name="message")
+	.message
+		span.user= useroranon
+		span :
+		span.text= text
